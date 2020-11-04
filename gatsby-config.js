@@ -14,10 +14,12 @@ module.exports = {
   },
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-styled-components`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        // Add any options here
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
   ],
